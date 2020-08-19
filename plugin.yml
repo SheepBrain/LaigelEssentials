@@ -1,0 +1,17 @@
+name: LaigelEssentials
+main: LaigelPlayz\Essentials\main
+api: 3.15.0
+author: LaigelPlayz
+version: 1.0
+
+commands:
+ hub:
+  description: "Teleport to server HUB"
+ feed:
+  description: "Feed Your Self"
+   permission: cmd.es.feed
+    default: op
+ heal:
+  description: "Heal Your Self"
+   permission: cmd.es.heal
+    default: op
