@@ -1,17 +1,30 @@
 name: LaigelEssentials
-main: LaigelPlayz\Essentials\main
+main: LaigelPlayz\Essentials\main:
 api: 3.15.0
 author: LaigelPlayz
 version: 1.0
 
 commands:
- hub:
-  description: "Teleport to server HUB"
+ spawn:
+  description: "Teleport self or other to spawn"
+  permission: es.spawn
+  usage: "/spawn [player]"
  feed:
-  description: "Feed Your Self"
-   permission: cmd.es.feed
-    default: op
+  description: "Feed your selected player"
+  permission: es.heal
+  usage: "/feed [player]"
  heal:
-  description: "Heal Your Self"
-   permission: cmd.es.heal
+  description: "Heal your selected player"
+  permission: es.heal
+  usage: "/heal [player]"
+
+permission:
+  es.spawn:
+    description: "permission to use /spawn for self and other"
+    default: true
+  es.feed:
+    description: "permission to use /feed for self and other"
+    default: op
+  es.heal:
+    description: "permission to use /heal for self and other"
     default: op
