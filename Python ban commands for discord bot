@@ -1,0 +1,5 @@
+@client.command(name="ban")
+@commands.has_permissions(ban_members = True)
+async def ban(ctx,member : discord.Member,*,reason= "No reason provided"):
+	await ctx.send(member.name + "has been banned from a server because:"+reason)
+	await member.ban(reason=reason)
